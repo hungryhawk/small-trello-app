@@ -33,9 +33,9 @@ export const variables = createGlobalTheme(':root', {
     big2: '15px',
     listSpacing: '30px',
   },
-  //   font: {
-  //     body: 'arial',
-  //   },
+    font: {
+      body: 'arial',
+    },
   shadow: {
     basic: '4px 4px 8px 0px rgba(34, 60, 80, 0.2)',
   },
