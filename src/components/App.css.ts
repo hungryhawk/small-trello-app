@@ -1,10 +1,8 @@
 import { style, createGlobalTheme } from '@vanilla-extract/css';
 
-// global variables
-
 export const variables = createGlobalTheme(':root', {
   colors: {
-    main: 'rgb(1,121,191)',
+    main: "lightgreen",
     mainDarker: 'rgb(7,101,160)',
     mainFaded: 'rgb(84,154,208)',
     mainFadedBright: 'rgb(100,170,208)',
@@ -62,26 +60,8 @@ export const deleteBoardButton = style({
   marginBottom: '30px',
   fontSize: variables.fontSizing.T4,
   padding: variables.spacing.big2,
-  backgroundColor: variables.colors.mainFaded,
-  cursor: 'pointer',
-  opacity: 0.6,
-  minWidth: 150,
-  ':hover': {
-    opacity: 0.8,
-  },
-});
-
-export const loggerButton = style({
-  border: 'none',
-  borderRadius: 5,
-  width: 'max-content',
-  marginTop: 'auto',
-  marginLeft: '15px',
-  marginRight: '30px',
-  marginBottom: '30px',
-  fontSize: variables.fontSizing.T4,
-  padding: variables.spacing.big2,
-  backgroundColor: variables.colors.mainFaded,
+  backgroundColor: "green",
+  color: 'white',
   cursor: 'pointer',
   opacity: 0.6,
   minWidth: 150,

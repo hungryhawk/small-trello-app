@@ -1,7 +1,6 @@
 import React from 'react';
-import { useTypedSelector } from '../../utilities/reduxHooks';
-import TrelloList from '../TrelloList/TrelloList';
-import TrelloActionButton from '../TrelloActionButton/TrelloActionButton';
+import TrelloList from '../List/TrelloList';
+import ActionButton from '../ActionButton/ActionButton';
 import { listsContainer } from './ListsContainer.css';
 import { list } from '../../types/types';
 
@@ -16,7 +15,7 @@ const ListsContainer: React.FC<ListsContainerProps> = ({ boardId, lists }) => {
       {lists.map((list) => (
         <TrelloList key={list.listId} list={list} boardId={boardId} />
       ))}
-      <TrelloActionButton list boardId={boardId} listId={''} />
+      <ActionButton list boardId={boardId} listId={''} />
     </div>
   );
 };

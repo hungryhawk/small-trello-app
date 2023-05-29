@@ -20,7 +20,7 @@ export const modalWindow = style({
   borderRadius: "30px",
   padding: "20px",
   boxShadow: variables.shadow.basic,
-  backgroundColor: variables.colors.mainDarker,
+  backgroundColor: "green",
   opacity: 0.95,
   color: variables.colors.brightText,
 });

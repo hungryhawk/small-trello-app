@@ -20,7 +20,7 @@ const initialState = {
     taskId: "task-0",
     taskName: "task 0",
     taskDescription: "description",
-    taskOwner: "Anton",
+    // taskOwner: "Anton",
   },
 };
 

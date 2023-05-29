@@ -5,9 +5,8 @@ import {
   board,
   buttons,
   deleteBoardButton,
-  loggerButton,
 } from './App.css';
-import BoardList from './BoardList/BoardList';
+import BoardList from './Board/Board';
 import ListsContainer from './ListsContainer/ListsContainer';
 import { DragDropContext } from 'react-beautiful-dnd';
 import { deleteBoard, sort } from '../redux/slices/boardsSlice';
@@ -93,12 +92,8 @@ const App = () => {
 
       setActiveBoardId(boards[newIndexToSet()].boardId);
     } else {
-      alert('Minimum board amount is 1');
+      alert('You should have at least one board');
     }
-  };
-
-  const handleOpenLogger = () => {
-    setLoggerOpen(!loggerOpen);
   };
 
   return (
@@ -118,9 +113,7 @@ const App = () => {
         <button className={deleteBoardButton} onClick={handleDeleteBoard}>
           Delete this board
         </button>
-        <button className={loggerButton} onClick={handleOpenLogger}>
-          {loggerOpen ? 'Hide activity history' : 'Show activity history'}
-        </button>
+
       </div>
     </div>
   );

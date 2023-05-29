@@ -7,7 +7,7 @@ import {
   buttons,
   close,
 } from "./DropDownForm.css";
-import { FiX } from "react-icons/fi";
+import { AiFillDelete } from "react-icons/ai";
 import { useTypedDispatch } from "../../../utilities/reduxHooks";
 import { addList, addTask } from "../../../redux/slices/boardsSlice";
 import { v4 as uuidv4, v4 } from "uuid";
@@ -64,7 +64,6 @@ const DropDownForm: React.FC<DropDownFormProps> = ({
               taskId: v4(),
               taskName: text,
               taskDescription: "",
-              taskOwner: "User",
             },
           })
         );
@@ -84,8 +83,6 @@ const DropDownForm: React.FC<DropDownFormProps> = ({
     setFormOpen(false);
   };
 
-  // TODO scalable textarea
-
   return (
     <div className={list ? listForm : taskForm}>
       <textarea
@@ -99,7 +96,7 @@ const DropDownForm: React.FC<DropDownFormProps> = ({
         <button className={button} onMouseDown={addBbuttonHandler}>
           {buttonTitle}
         </button>
-        <FiX className={close} onClick={closeButtonHandler} />
+        <AiFillDelete className={close} onClick={closeButtonHandler} />
       </div>
     </div>
   );

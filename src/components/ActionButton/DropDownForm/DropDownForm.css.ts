@@ -41,11 +41,11 @@ export const button = style({
   color: variables.colors.brightText,
   padding: variables.spacing.medium,
   fontSize: variables.fontSizing.T3,
-  backgroundColor: variables.colors.mainDarker,
+  backgroundColor: "green",
   border: "none",
   cursor: "pointer",
   ":hover": {
-    backgroundColor: variables.colors.mainFaded,
+    backgroundColor: "lightgreen",
   },
 });
 

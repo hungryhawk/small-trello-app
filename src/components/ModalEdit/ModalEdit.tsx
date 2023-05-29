@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState } from "react";
+import { ChangeEvent, useState } from "react";
 import {
   buttons,
   closeButton,
@@ -76,9 +76,6 @@ const ModalEdit = () => {
       task: { ...data.task, taskDescription: e.target.value },
     });
   };
-  const handleAuthorChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setData({ ...data, task: { ...data.task, taskOwner: e.target.value } });
-  };
 
   return (
     <div className={wrapper}>
@@ -101,19 +98,13 @@ const ModalEdit = () => {
           value={data.task.taskDescription}
           onChange={handleDescriptionChange}
         />
-        <div className={title}>Task author</div>
-        <input
-          type="text"
-          className={input}
-          value={data.task.taskOwner}
-          onChange={handleAuthorChange}
-        />
+    
         <div className={buttons}>
           <button className={updateButton} onClick={handleUpdate}>
             Update task
           </button>
           <button className={deleteButton} onClick={handleDelete}>
-            Delete tasks
+            Delete task
           </button>
         </div>
       </div>

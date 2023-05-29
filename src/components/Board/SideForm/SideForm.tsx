@@ -1,6 +1,6 @@
 import React, { ChangeEvent, useState } from "react";
 import { icon, input, sideForm } from "./SideForm.css";
-import { FiCheck } from "react-icons/fi";
+import { MdOutlineAdd } from "react-icons/md";
 import { useTypedDispatch } from "../../../utilities/reduxHooks";
 import { addBoard } from "../../../redux/slices/boardsSlice";
 import { v4 as uuidv4, v4 } from "uuid";
@@ -42,7 +42,6 @@ const SideForm: React.FC<SideFormProps> = ({ setFormOpen }) => {
 
   return (
     <div className={sideForm}>
-      {/* инпут когда мы хотим создать борд новый  */}
       <input
         type="text"
         autoFocus
@@ -51,8 +50,7 @@ const SideForm: React.FC<SideFormProps> = ({ setFormOpen }) => {
         onChange={handleTextChange}
         placeholder="Enter new board name"
       />
-      {/* галочка подтверждения  */}
-      <FiCheck className={icon} onMouseDown={handleAddBoard} />
+      <MdOutlineAdd className={icon} onMouseDown={handleAddBoard} />
     </div>
   );
 };

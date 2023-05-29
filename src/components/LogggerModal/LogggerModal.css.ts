@@ -1,5 +1,4 @@
-import { style, createGlobalTheme } from '@vanilla-extract/css';
-import { calc } from '@vanilla-extract/css-utils';
+import { style } from '@vanilla-extract/css';
 import { variables } from '../App.css';
 
 export const wrapper = style({
@@ -14,7 +13,7 @@ export const wrapper = style({
   marginLeft: 'auto',
   overflowX: 'hidden',
   background:
-    'linear-gradient(180deg, rgba(84,154,208,1) 1%, rgba(84,154,208,1) 45%, rgba(1,121,191,1) 100%)',
+  "linear-gradient(109.6deg, rgb(5, 85, 84) 11.2%, rgb(64, 224, 208) 91.1%)",
 });
 
 export const title = style({

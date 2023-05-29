@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { IoIosAdd } from "react-icons/io";
-import { list } from "../../types/types";
 import DropDownForm from "./DropDownForm/DropDownForm";
-import { taskButton, listButton } from "./TrelloActionButton.css";
+import { taskButton, listButton } from "./ActionButton.css";
 
 interface TrelloActionButtonProps {
   boardId: string;
@@ -22,7 +21,6 @@ const TrelloActionButton: React.FC<TrelloActionButtonProps> = ({
     setFormOpen(true);
   };
 
-  // при нажатии на кнопку добавить таск, появляется кнопка с инпутом 
   return formOpen ? (
     <DropDownForm
       setFormOpen={setFormOpen}

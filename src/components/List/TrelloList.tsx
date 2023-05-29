@@ -1,13 +1,13 @@
 import React from 'react';
 import { list } from '../../types/types';
-import TrelloActionButton from '../TrelloActionButton/TrelloActionButton';
-import TrelloTask from '../TrelloTask/TrelloTask';
+import ActionButton from '../ActionButton/ActionButton';
+import TrelloTask from '../Task/TrelloTask';
 import { deleteButton, header, listWrapper, name } from './TrelloList.css';
 import { Droppable } from 'react-beautiful-dnd';
 import { useTypedDispatch } from '../../utilities/reduxHooks';
 import { deleteList, setModalActive } from '../../redux/slices/boardsSlice';
 import { setModalData } from '../../redux/slices/modalSlice';
-import { GrSubtract } from 'react-icons/gr';
+import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { addLog } from '../../redux/slices/loggerSlice';
 import { v4 } from 'uuid';
 
@@ -57,7 +57,7 @@ const TrelloList: React.FC<TrelloListProps> = ({ boardId, list }) => {
         >
           <div className={header}>
             <div className={name}>{list.listName}</div>
-            <GrSubtract
+            <AiOutlineCloseCircle
               className={deleteButton}
               onClick={() => handleListDelete(list.listId)}
             />
@@ -79,7 +79,7 @@ const TrelloList: React.FC<TrelloListProps> = ({ boardId, list }) => {
             </div>
           ))}
           {provided.placeholder}
-          <TrelloActionButton boardId={boardId} listId={list.listId} />
+          <ActionButton boardId={boardId} listId={list.listId} />
         </div>
       )}
     </Droppable>

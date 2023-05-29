@@ -1,6 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { board, list, task } from '../../types/types';
-import { addLog } from './loggerSlice.ts';
 
 type deleteBoardAction = {
   boardId: string;
@@ -61,19 +60,16 @@ const initialState: boardsState = {
               taskId: 'task-0',
               taskName: 'Task 1',
               taskDescription: 'Description',
-              taskOwner: 'Anton',
             },
             {
               taskId: 'task-1',
               taskName: 'Task 2',
               taskDescription: 'Description',
-              taskOwner: 'Anton',
             },
             {
               taskId: 'task-2',
               taskName: 'Task 3',
               taskDescription: 'Description',
-              taskOwner: 'Anton',
             },
           ],
         },
@@ -85,13 +81,11 @@ const initialState: boardsState = {
               taskId: 'task-3',
               taskName: 'Task 1',
               taskDescription: 'Description',
-              taskOwner: 'Anton',
             },
             {
               taskId: 'task-4',
               taskName: 'Task 2',
               taskDescription: 'Description',
-              taskOwner: 'Anton',
             },
           ],
         },

@@ -9,7 +9,7 @@ export const container = style({
   rowGap: 15,
   minHeight: "max-content",
   padding: variables.spacing.big2,
-  backgroundColor: variables.colors.mainDarker,
+  backgroundColor: "green",
 });
 
 export const title = style({
